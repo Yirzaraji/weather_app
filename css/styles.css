@@ -1,0 +1,41 @@
+body {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.colorLayer {
+    background-color: #86b9e0!important;
+}
+
+#app {
+    background: url("../images/parislow.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#infoDegree {
+    height: 310px;
+}
+
+#degreediv {
+    font-size: 3rem;
+}
+
+#imageApp {
+    height: 100%;
+    position: absolute;
+}
+
+.material-icons {
+    color: white;
+}
+
+.sunnyIcon {
+    font-size: 39px;
+}
+
+.rowJour {
+    height: 50px;
+    background-color: #dddddd0f;
+    line-height: 50px;
+}
