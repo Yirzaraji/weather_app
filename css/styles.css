@@ -26,7 +26,11 @@ body {
     position: absolute;
 }
 
-.material-icons {
+.whiteIcon {
+    color: white;
+}
+
+.closeIcon {
     color: white;
 }
 

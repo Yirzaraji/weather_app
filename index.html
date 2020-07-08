@@ -5,19 +5,24 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Hello, world!</title>
+    <title>Yirzaraji Meteo App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
-
     <div class="container colorApp" id="app">
-
+        <div class="cities" v-if="showCities">
+            City: <input type="text" v-model="search" />
+            <ul>
+                <li v-for="city in filteredCities">
+                    {{ city.name }}
+                </li>
+            </ul>
+        </div>
         <!-- <img src="images/paris.jpg" class="img-fluid" id="imageApp" alt="Responsive image">-->
         <div class="row">
             <div class="col-12 bg-primary text-center">
@@ -27,15 +32,15 @@
         <div class="row">
             <div class="col-2 bg-info text-left align-middle">
                 <button class="btn">
-                    <span class="material-icons">
+                    <span class="material-icons whiteIcon">
                         menu
                     </span>
                 </button>
             </div>
             <div class="col-10 text-right bg-info">
                 Paris - France
-                <button class="btn" id="buttonCity">
-                    <span class="material-icons">
+                <button class="btn" id="buttonCity" v-on:click="showCities = !showCities">
+                    <span class="material-icons whiteIcon">
                         add_circle_outline
                     </span> 
                 </button>
@@ -43,35 +48,35 @@
         </div>
         <div class="row" id="infoDegree">
             <div class="col-6 text-center mt-5" id="degreediv">
-                <span class="material-icons sunnyIcon">wb_sunny </span> 32°
+                <span class="material-icons sunnyIcon whiteIcon">wb_sunny </span> 32°
             </div>
             <div class="col-6 text-center mt-5">
                 Grand Soleil</br>
-                JEU 13 JUIN 2020
+                MAR 05 mai 2020
             </div>
         </div>
         <div class="row rowJour mt-1">
-            <div class="col-6 text-left">
+            <div class="col-8 text-left">
                 Mardi 06 mai
             </div>
-            <div class="col-6 text-right">
-                29°<span class="material-icons">cloud</span>
+            <div class="col-4 text-right">
+                29° <span class="material-icons whiteIcon">cloud</span>
             </div>
         </div>
         <div class="row rowJour mt-1">
-            <div class="col-6 text-left">
-                Mardi 07 mai
+            <div class="col-8 text-left">
+                Mercredi 07 mai
             </div>
-            <div class="col-6 text-right">
-                29°<span class="material-icons">grain</span>
+            <div class="col-4 text-right">
+                29° <span class="material-icons whiteIcon">grain</span>
             </div>
         </div>
         <div class="row rowJour mt-1">
-            <div class="col-6 text-left">
-                Mardi 09 mai
+            <div class="col-8 text-left">
+                Jeudi 09 mai
             </div>
-            <div class="col-6 text-right">
-                29°<span class="material-icons">nights_stay</span>
+            <div class="col-4 text-right">
+                29° <span class="material-icons whiteIcon">nights_stay</span>
             </div>
         </div>
     </div>
